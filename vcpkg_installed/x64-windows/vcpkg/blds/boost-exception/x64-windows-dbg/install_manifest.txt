@@ -1,0 +1,1 @@
+C:/Users/marci/OneDrive/Pulpit/PO_biblioteka/vcpkg_installed/x64-windows/vcpkg/pkgs/boost-exception_x64-windows/debug/lib/libboost_exception-vc143-mt-gd-x64-1_83.lib

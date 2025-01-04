@@ -1,0 +1,8 @@
+Package: crow
+Version: 1.0-5
+Depends: boost-algorithm, boost-array, boost-asio, boost-date-time, boost-functional, boost-lexical-cast, boost-optional, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: c5d9680723373c00ab6c857a9cf52b4af7c0e76fc5729bf0c7f369cce1df522f
+Description: Very fast and easy to use C++ micro web framework
+Status: install ok half-installed

@@ -1,0 +1,7 @@
+Package: boost-mp11
+Version: 1.83.0
+Depends: boost-vcpkg-helpers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: c0baecc904025bd47e57be1fda29a355f5173c368b75bb7ec8c348f568c4dc56
+Description: Boost mp11 module

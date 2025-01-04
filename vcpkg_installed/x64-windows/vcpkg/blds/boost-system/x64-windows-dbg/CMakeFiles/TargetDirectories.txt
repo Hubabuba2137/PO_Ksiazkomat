@@ -1,0 +1,6 @@
+C:/Users/marci/OneDrive/Pulpit/PO_biblioteka/vcpkg_installed/x64-windows/vcpkg/blds/boost-system/x64-windows-dbg/CMakeFiles/boost.dir
+C:/Users/marci/OneDrive/Pulpit/PO_biblioteka/vcpkg_installed/x64-windows/vcpkg/blds/boost-system/x64-windows-dbg/CMakeFiles/edit_cache.dir
+C:/Users/marci/OneDrive/Pulpit/PO_biblioteka/vcpkg_installed/x64-windows/vcpkg/blds/boost-system/x64-windows-dbg/CMakeFiles/rebuild_cache.dir
+C:/Users/marci/OneDrive/Pulpit/PO_biblioteka/vcpkg_installed/x64-windows/vcpkg/blds/boost-system/x64-windows-dbg/CMakeFiles/list_install_components.dir
+C:/Users/marci/OneDrive/Pulpit/PO_biblioteka/vcpkg_installed/x64-windows/vcpkg/blds/boost-system/x64-windows-dbg/CMakeFiles/install.dir
+C:/Users/marci/OneDrive/Pulpit/PO_biblioteka/vcpkg_installed/x64-windows/vcpkg/blds/boost-system/x64-windows-dbg/CMakeFiles/install/local.dir

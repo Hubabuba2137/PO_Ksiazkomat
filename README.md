@@ -22,14 +22,14 @@ Możemy teraz uruchomić program w VS i powinno otworzyć się okno terminala, p
 
 Wybrane mechanizmy:
 
-    Tworzenie konta - wprowadza się dane na stronie, system sprawdza w bazie czy nie ma już takiego użytkownika, jeżeli nie to dodaje nowy obiekt do listy użytkowników i wzywa   funkcję do zapisu pliku z użytkownikami.
+Tworzenie konta - wprowadza się dane na stronie, system sprawdza w bazie czy nie ma już takiego użytkownika, jeżeli nie to dodaje nowy obiekt do listy użytkowników i wzywa   funkcję do zapisu pliku z użytkownikami.
 
 
-  Logowanie - system sprawdza czy dane logowania są zgodne z tymi co w bazie użytkowników. Jeżeli dane logowania do dane admina to system przekierowywuje na stronę bibliotekarza.
-  Jeżeli użytkownik jest zablokowany (jego dane znajdują się w pliku "baza_czytelnikow_bloakda.txt") to ystem uniemożliwia zalogowanie i informuje o potrzebie zwrócenia książki i uiszczeniu opłaty u bibliotekarza.
+Logowanie - system sprawdza czy dane logowania są zgodne z tymi co w bazie użytkowników. Jeżeli dane logowania do dane admina to system przekierowywuje na stronę bibliotekarza.
+Jeżeli użytkownik jest zablokowany (jego dane znajdują się w pliku "baza_czytelnikow_bloakda.txt") to ystem uniemożliwia zalogowanie i informuje o potrzebie zwrócenia książki i uiszczeniu opłaty u bibliotekarza.
 
 
-  Wyszukanie - można albo przejść na stronę do wyszukiwania albo kliknąć w książkę na stronie głównej. Zalogowany użytkownik może, po wyszukaniu, wypożyczyć książkę.
+Wyszukanie - można albo przejść na stronę do wyszukiwania albo kliknąć w książkę na stronie głównej. Zalogowany użytkownik może, po wyszukaniu, wypożyczyć książkę.
 
 
   Wypożyczenie - zalogowany użytkownik klika przycisk "wypożycz" po wyszukaniu książki. System sprawdza czy książka już nie jest wypożyczona, jeżeli nie to uruchamiana jest funkcja Czytelnik::wypozycz, która po sprawdzeniu czy książka istnieje, uruchamia funkcję BazaWypożyczeń::przyznanieWyp. Funkcja ta po sprawdzeniu, dodaje wypożcyzenie do poczekalni.

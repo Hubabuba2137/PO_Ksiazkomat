@@ -2,12 +2,20 @@
 Książkomat to taki paczkomat ale dla książek. Wypożyczasz książki i odbierasz je w skrytce a potem też je tam oddajesz.
 
 Getting started:
-Pobieracie to na kompa i rozpoakowywujecie. Jeżeli nie dziala to upewnijcie się że macie pobranego crow.h, jeżeli nie macie to tutaj jest link do instalacji:
-https://crowcpp.org/master/
-Jeżeli macie windowsa to polecam użyć VCpkg:
-https://youtu.be/3X4DmBfjy0Y?si=wGiTWSjZWTuMjkdY
-Jeżeli nie ma żadnych błędów to uruchomcie plik server.cpp i waszym oczom powinno się ukazać okno terminala z całym ruchem.
-Potem w przeglądarce wpisujecie localhost:8080 i gotowe.
+
+Najpierw należy utworzyć nowy projekt w VS, najlepiej pusty. Następnie kopiujemy do niego: static, templates, Klasy.cpp, Klasy.h, date.hpp, server.cpp, send_email.exe i baza_ksiazek.txt.
+Następnie pklikamy widok, terminal. W nim wpisujemy:
+
+    vcpkg integrate install
+
+Następnie przechodzimy do właściwości projektu (prawy przycisk na ikonkę rozwiązania projektu - sln) i w sekcji vcpkg, zezwalamy na użycie manifestu.
+Potem ponownie otwieramy terminal i w nim wpisujemy:
+
+    vcpkg new --application
+    vcpkg add port crow
+
+Po udanym zainstalowaniu należy skompilować rozwiązanie (f7). Przy powodzeniu wyłączyć i włączyć ponownie VS (aby pozbyć się podkreśleń i informacji o błędach).
+Możemy teraz uruchomić program w VS i powinno otworzyć się okno terminala, po czym w przeglądarce wpisać "localhost:8080".
 
 
 Wybrane mechanizmy:

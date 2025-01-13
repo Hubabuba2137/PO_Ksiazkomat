@@ -3,7 +3,7 @@ Książkomat to taki paczkomat ale dla książek. Wypożyczasz książki i odbie
 
 Getting started:
 
-Najpierw należy utworzyć nowy projekt w VS, najlepiej pusty (można dodać aplikację konsoli aby sprawdzić poprawność instalacji crow.h poprzez dodanie #include <crow.h>). Następnie kopiujemy do niego: static, templates, Klasy.cpp, Klasy.h, date.hpp, server.cpp, send_email.exe i baza_ksiazek.txt.
+Najpierw należy utworzyć nowy projekt w VS, najlepiej pusty (można dodać aplikację konsoli aby sprawdzić poprawność instalacji crow.h poprzez dodanie #include <crow.h>). Następnie kopiujemy do niego: static, templates, Klasy.cpp, Klasy.h, date.hpp, server.cpp, send_email.exe i baza_ksiazek.txt (plik ten zostanie automatycznie utworzony ale jeżeli go nie wypełnimy książkami to dostaniemy błąd std::vector).
 Dodatkowo możemy skopiować folder email.
 Następnie pklikamy widok, terminal. W nim wpisujemy:
 

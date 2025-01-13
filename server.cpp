@@ -933,8 +933,8 @@ int main()
 				return crow::response(400, "Prolongata już była użyta");
 			}
 
-			// Dodaj 14 dni do daty oddania
-			it->prolong(14, it->data_oddania);
+			// Dodaj 30 dni do daty oddania
+			it->prolong(30, it->data_oddania);
 
 			baza_wypozyczen.saveWyp();
 

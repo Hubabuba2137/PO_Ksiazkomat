@@ -1,9 +1,11 @@
-﻿#include <crow.h>
+#include <crow.h>
 #include <iostream>
 #include <string>
 #include "Klasy.h"
 #include <unordered_map>
 #include <random>
+#include <algorithm> 
+#include <random>  
 
 using namespace std;
 
@@ -73,19 +75,25 @@ int main()
 
 		ctx["login"] = login;
 
-		// Tworzenie listy książek
+		// Pobranie książek i wymieszanie ich
+		baza_ksiazek.setBooks();
 		std::vector<Ksiazka> ksiazki = baza_ksiazek.getBooks();
-		crow::json::wvalue::list ksiazki_list;
+		std::random_device rd;
+		std::mt19937 g(rd());
+		std::shuffle(ksiazki.begin(), ksiazki.end(), g);
 
-		for (const auto& ksiazka : ksiazki) {
+		// Wybranie maksymalnie 6 książek
+		crow::json::wvalue::list ksiazki_list;
+		size_t limit = std::min(ksiazki.size(), static_cast<size_t>(6));
+		for (size_t i = 0; i < limit; ++i) {
 			crow::json::wvalue book_ctx;
-			book_ctx["tytul"] = ksiazka.tytul;
-			book_ctx["autor"] = ksiazka.autor;
-			book_ctx["okladka"] = ksiazka.okladka;
+			book_ctx["tytul"] = ksiazki[i].tytul;
+			book_ctx["autor"] = ksiazki[i].autor;
+			book_ctx["okladka"] = ksiazki[i].okladka;
 			ksiazki_list.push_back(std::move(book_ctx));
 		}
 
-		ctx["ksiazki"] = std::move(ksiazki_list);
+		ctx["ksiazki"] = std::move(ksiazki_list); // Przypisanie listy książek do kontekstu
 
 		return page.render(ctx);
 		});
@@ -103,21 +111,17 @@ int main()
 
 		ctx["login"] = login;
 
-		// Tworzenie listy książek
+		// Pobranie książek i wymieszanie ich
 		baza_ksiazek.setBooks();
 		std::vector<Ksiazka> ksiazki = baza_ksiazek.getBooks();
+		std::random_device rd;
+		std::mt19937 g(rd());
+		std::shuffle(ksiazki.begin(), ksiazki.end(), g);
+
+		// Wybranie maksymalnie 6 książek
 		crow::json::wvalue::list ksiazki_list;
-
-		/*
-		for (auto ksiazka : ksiazki) {
-			crow::json::wvalue book_ctx;
-			book_ctx["tytul"] = ksiazka.tytul;
-			book_ctx["autor"] = ksiazka.autor;
-			book_ctx["okladka"] = ksiazka.okladka;
-			ksiazki_list.push_back(std::move(book_ctx));
-		}*/
-
-		for (int i = 0; i < 6; i++) {
+		size_t limit = std::min(ksiazki.size(), static_cast<size_t>(6));
+		for (size_t i = 0; i < limit; ++i) {
 			crow::json::wvalue book_ctx;
 			book_ctx["tytul"] = ksiazki[i].tytul;
 			book_ctx["autor"] = ksiazki[i].autor;
@@ -162,23 +166,29 @@ int main()
 		auto page = crow::mustache::load("main_log.html");
 		crow::mustache::context ctx;
 
-		ctx["login"] = login; // Wstaw login do szablonu
+		ctx["login"] = login;
 
-		// Tworzenie listy książek
+		// Pobranie książek i wymieszanie ich
+		baza_ksiazek.setBooks();
 		std::vector<Ksiazka> ksiazki = baza_ksiazek.getBooks();
-		crow::json::wvalue::list ksiazki_list;
+		std::random_device rd;
+		std::mt19937 g(rd());
+		std::shuffle(ksiazki.begin(), ksiazki.end(), g);
 
-		for (const auto& ksiazka : ksiazki) {
+		// Wybranie maksymalnie 6 książek
+		crow::json::wvalue::list ksiazki_list;
+		size_t limit = std::min(ksiazki.size(), static_cast<size_t>(6));
+		for (size_t i = 0; i < limit; ++i) {
 			crow::json::wvalue book_ctx;
-			book_ctx["tytul"] = ksiazka.tytul;
-			book_ctx["autor"] = ksiazka.autor;
-			book_ctx["okladka"] = ksiazka.okladka;
+			book_ctx["tytul"] = ksiazki[i].tytul;
+			book_ctx["autor"] = ksiazki[i].autor;
+			book_ctx["okladka"] = ksiazki[i].okladka;
 			ksiazki_list.push_back(std::move(book_ctx));
 		}
 
 		ctx["ksiazki"] = std::move(ksiazki_list); // Przypisanie listy książek do kontekstu
 
-		return page.render(ctx); // Renderuj stronę z loginem
+		return page.render(ctx);
 		});
 
 	CROW_ROUTE(app, "/wyszukanie_log.html")

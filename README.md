@@ -20,6 +20,10 @@ Możemy teraz uruchomić program w VS i powinno otworzyć się okno terminala, p
 
     localhost:8080
 
+W przypadku problemów z instalacją crow.h przy użyciu vcpkg polecam ten film:
+
+https://www.youtube.com/watch?v=3X4DmBfjy0Y
+
 Uwaga!
 
 Skolonowanie repozytorium nie zadziała z powodu jakichś błędów przy konfiguracji Crow.h. Dlatego postanowiłem pozbyć się kilku folderów (program i tak się nie kompilował więc nie ma różnicy).

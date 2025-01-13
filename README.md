@@ -15,7 +15,9 @@ Potem ponownie otwieramy terminal i w nim wpisujemy:
     vcpkg add port crow
 
 Po udanym zainstalowaniu należy skompilować rozwiązanie (f7). Przy powodzeniu wyłączyć i włączyć ponownie VS (aby pozbyć się podkreśleń i informacji o błędach).
-Możemy teraz uruchomić program w VS i powinno otworzyć się okno terminala, po czym w przeglądarce wpisać "localhost:8080".
+Możemy teraz uruchomić program w VS i powinno otworzyć się okno terminala, po czym w przeglądarce wpisać:
+
+    localhost:8080
 
 
 Wybrane mechanizmy:

@@ -3,7 +3,8 @@ Książkomat to taki paczkomat ale dla książek. Wypożyczasz książki i odbie
 
 Getting started:
 
-Najpierw należy utworzyć nowy projekt w VS, najlepiej pusty. Następnie kopiujemy do niego: static, templates, Klasy.cpp, Klasy.h, date.hpp, server.cpp, send_email.exe i baza_ksiazek.txt.
+Najpierw należy utworzyć nowy projekt w VS, najlepiej pusty (można dodać aplikację konsoli aby sprawdzić poprawność instalacji crow.h poprzez dodanie #include <crow.h>). Następnie kopiujemy do niego: static, templates, Klasy.cpp, Klasy.h, date.hpp, server.cpp, send_email.exe i baza_ksiazek.txt.
+Dodatkowo możemy skopiować folder email.
 Następnie pklikamy widok, terminal. W nim wpisujemy:
 
     vcpkg integrate install
@@ -19,6 +20,9 @@ Możemy teraz uruchomić program w VS i powinno otworzyć się okno terminala, p
 
     localhost:8080
 
+Uwaga!
+
+Skolonowanie repozytorium nie zadziała z powodu jakichś błędów przy konfiguracji Crow.h. Dlatego postanowiłem pozbyć się kilku folderów (program i tak się nie kompilował więc nie ma różnicy).
 
 Wybrane mechanizmy:
 
@@ -32,10 +36,10 @@ Jeżeli użytkownik jest zablokowany (jego dane znajdują się w pliku "baza_czy
 Wyszukanie - można albo przejść na stronę do wyszukiwania albo kliknąć w książkę na stronie głównej. Zalogowany użytkownik może, po wyszukaniu, wypożyczyć książkę.
 
 
-  Wypożyczenie - zalogowany użytkownik klika przycisk "wypożycz" po wyszukaniu książki. System sprawdza czy książka już nie jest wypożyczona, jeżeli nie to uruchamiana jest funkcja Czytelnik::wypozycz, która po sprawdzeniu czy książka istnieje, uruchamia funkcję BazaWypożyczeń::przyznanieWyp. Funkcja ta po sprawdzeniu, dodaje wypożcyzenie do poczekalni.
-  Następnie bibliotekkarz może zaakceptować wypożyczenie u siebie na stronie do zarządzania wypożyczeniami (bib_wyp.html), wywołując funkcję Bibliotekarz::akceptacja_wyp, która tworzy właściwe wypożyczenie (pobiera i ustawia daty itd.). Funkcja ta też wywołują inną funkcję Bibliotekarz::sendEmail. Po zaakceptowaniu wypożyczenia, znajduje się ono potem na profilu użytkownika.
-  Wysyłanie emaila polega na dodaniu najpierw danych do pliku email.txt o formacie: "email/login/tytul_ksiazki/data_oddania/numer_skrytki", po czym uruchamia plik send_email.exe.
-  Jest to skrypt w pythonie, który wczytuje potrzebne dane i wysyłka emaila (nie działało uruchamianie pliku.py to zrobiłem .exe)
+Wypożyczenie - zalogowany użytkownik klika przycisk "wypożycz" po wyszukaniu książki. System sprawdza czy książka już nie jest wypożyczona, jeżeli nie to uruchamiana jest funkcja Czytelnik::wypozycz, która po sprawdzeniu czy książka istnieje, uruchamia funkcję BazaWypożyczeń::przyznanieWyp. Funkcja ta po sprawdzeniu, dodaje wypożcyzenie do poczekalni.
+Następnie bibliotekkarz może zaakceptować wypożyczenie u siebie na stronie do zarządzania wypożyczeniami (bib_wyp.html), wywołując funkcję Bibliotekarz::akceptacja_wyp, która tworzy właściwe wypożyczenie (pobiera i ustawia daty itd.). Funkcja ta też wywołują inną funkcję Bibliotekarz::sendEmail. Po zaakceptowaniu wypożyczenia, znajduje się ono potem na profilu użytkownika.
+Wysyłanie emaila polega na dodaniu najpierw danych do pliku email.txt o formacie: "email/login/tytul_ksiazki/data_oddania/numer_skrytki", po czym uruchamia plik send_email.exe.
+Jest to skrypt w pythonie, który wczytuje potrzebne dane i wysyłka emaila (nie działało uruchamianie pliku.py to zrobiłem .exe)
 
 Dane:
 

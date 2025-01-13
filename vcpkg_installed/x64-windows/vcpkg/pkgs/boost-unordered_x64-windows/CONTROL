@@ -1,7 +1,0 @@
-Package: boost-unordered
-Version: 1.83.0
-Depends: boost-assert, boost-config, boost-container-hash, boost-core, boost-move, boost-mp11, boost-predef, boost-preprocessor, boost-static-assert, boost-throw-exception, boost-tuple, boost-type-traits, boost-vcpkg-helpers
-Architecture: x64-windows
-Multi-Arch: same
-Abi: ec29daf440771d6bcc54ef70e8135b34a58f253f81297b81265122a5671020a9
-Description: Boost unordered module

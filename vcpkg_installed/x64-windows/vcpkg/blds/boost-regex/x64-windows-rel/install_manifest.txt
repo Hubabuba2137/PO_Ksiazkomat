@@ -1,2 +1,0 @@
-C:/Users/marci/OneDrive/Pulpit/PO_biblioteka/vcpkg_installed/x64-windows/vcpkg/pkgs/boost-regex_x64-windows/lib/boost_regex-vc143-mt-x64-1_83.lib
-C:/Users/marci/OneDrive/Pulpit/PO_biblioteka/vcpkg_installed/x64-windows/vcpkg/pkgs/boost-regex_x64-windows/bin/boost_regex-vc143-mt-x64-1_83.dll

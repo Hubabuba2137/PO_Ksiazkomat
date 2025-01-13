@@ -1,2 +1,0 @@
-C:/Users/marci/OneDrive/Pulpit/PO_biblioteka/vcpkg_installed/x64-windows/vcpkg/pkgs/boost-container_x64-windows/debug/lib/boost_container-vc143-mt-gd-x64-1_83.lib
-C:/Users/marci/OneDrive/Pulpit/PO_biblioteka/vcpkg_installed/x64-windows/vcpkg/pkgs/boost-container_x64-windows/debug/bin/boost_container-vc143-mt-gd-x64-1_83.dll
